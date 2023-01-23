@@ -55,17 +55,17 @@
                                     oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                                     required>
                             </div>
-                            <!--<div class="col-4">
-                                <label for="amount" class="col-form-label">Amount $</label>
-                                <input type="text" class="form-control" id="amount" required>
-                            </div>-->
 
                             <div class="col-12 col-md-4">
-                                <label for="amount" class="col-form-label">Amount $
-                                    <span class="input-group-text"> $ &nbsp;
-                                        <input type="number" name="amount" class="form-control" id="amount" required>
+                                <label for="amount" class="col-form-label">Amount $</label>
+                                <div class="col input-group flex-nowrap">
+                                    <span class="input-group-text w-100"> $ &nbsp;
+                                        <input type="number" name="amount" class="form-control flex-grow-1" id="amount"
+                                            oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                            required>
                                     </span>
-                                </label>
+
+                                </div>
                             </div>
 
                         </div><!--/row-->
@@ -100,7 +100,7 @@
                             <div class="col-12 col-md-3">
                                 <label for="postalcode" class="col-form-label">Postal Code</label>
                                 <input type="number" name="postalcode" class="form-control" id="postalcode"
-                                    maxlength="5"
+                                    maxlength="16"
                                     oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                                     required>
                             </div>
@@ -108,29 +108,30 @@
 
                         <!--4ta Fila-->
                         <div class="row">
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-md-3">
                                 <fieldset>
                                     <label for="cardtype" class="col-form-label">We are accept:</label>
-                                    <div class="border border-dark rounded bg-secondary p-2 me-6">
-                                        <div class="form-check form-check-inline">
+                                    <div
+                                        class="border border-dark rounded bg-secondary justify-content-around d-flex p-2 pe-5">
+                                        <div class="form-check">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                 id="inlineRadio1" value="mastercard">
-                                            <label class="form-check-label bg-secondary" for="inlineRadio1"><i
+                                            <label class="form-check-label" for="inlineRadio1"><i
                                                     class="fab fa-cc-mastercard fa-2x"></i></label>
                                         </div>
-                                        <div class="form-check form-check-inline">
+                                        <div class="form-check">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                 id="inlineRadio2" value="visa">
-                                            <label class="form-check-label bg-secondary" for="inlineRadio2"><i
+                                            <label class="form-check-label" for="inlineRadio2"><i
                                                     class="fab fa-cc-visa fa-2x"></i></label>
                                         </div>
-                                        <div class="form-check form-check-inline bg-secondary">
+                                        <div class="form-check">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                 id="inlineRadio3" value="dinnersclub">
                                             <label class="form-check-label" for="inlineRadio3"><i
                                                     class="fab fa-cc-diners-club fa-2x"></i></label>
                                         </div>
-                                        <div class="form-check form-check-inline bg-secondary">
+                                        <div class="form-check">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                 id="inlineRadio4" value="americanexpress">
                                             <label class="form-check-label" for="inlineRadio3"><i
